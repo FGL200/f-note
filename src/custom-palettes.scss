@@ -1,0 +1,647 @@
+// height width inherit property
+@mixin heightInherit {
+  height: inherit;
+}
+@mixin widthInherit {
+  width: inherit;
+}
+@mixin transition {
+  transition: all linear 0.3s;
+}
+@mixin minWidthInherit {
+  min-width: inherit;
+}
+@mixin minHeightInherit {
+  min-height: inherit;
+}
+@mixin overflowInitial {
+  overflow: initial;
+}
+@mixin lineHeightinherit {
+  line-height: inherit;
+}
+//select field
+@mixin cashierSelectFieldStyle {
+.cashier-select-field-style {
+    .mat-mdc-form-field-appearance-legacy.mat-mdc-form-field-can-float.mat-mdc-form-field-should-float .mat-mdc-form-field-label {
+        @apply hidden;
+    }
+    .mat-mdc-form-field-hide-placeholder .mat-mdc-select-placeholder {
+        @apply text-bodyText opacity-70;
+        -webkit-text-fill-color: #616161;
+    }
+    .mat-mdc-form-field-appearance-legacy .mat-mdc-form-field-underline {
+        @apply hidden;
+    }
+    .mat-mdc-form-field-flex {
+        @apply h-12 leading-[46px] border border-solid border-grayBorder px-5 rounded-[3px] outline-none text-[14px] text-bodyText font-primary font-normal w-full bg-grayBg flex items-center; 
+    }
+    .mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) .mat-mdc-form-field-infix {
+      @apply p-0 w-full;
+    }
+    .mat-mdc-form-field-infix {
+        @apply w-full border-t-0 flex items-center min-h-0;
+    }
+    .mat-form-field-hide-placeholder .mat-mdc-select-placeholder,
+    .mat-mdc-select {
+      @apply opacity-100 text-[14px] text-bodyText font-primary;
+      -webkit-text-fill-color: #616161;
+    }
+    .mat-form-field-appearance-fill .mat-mdc-select-arrow-wrapper {
+      transform: translateY(0px);
+    }
+    .mat-mdc-text-field-wrapper .mat-mdc-form-field-infix .mat-mdc-floating-label {
+      @apply hidden;
+    }
+    .mat-mdc-form-field-subscript-wrapper,
+    .mdc-line-ripple {
+      @apply hidden;
+    }
+    .mat-mdc-select-value-text {
+      @apply text-bodyText font-primary;
+    }
+    .mdc-text-field {
+      @apply p-0 rounded-none;
+    }
+    .mat-mdc-form-field {
+      @apply font-primary w-full;
+    }
+    .mat-mdc-text-field-wrapper {
+      @apply min-w-[100px] rounded-none;
+    }
+}
+.mat-mdc-option span.mdc-list-item__primary-text {
+  @apply text-[14px] font-primary text-heading;
+}
+}
+
+//input field
+@mixin cashierInputFieldStyle {
+.cashier-input-field-style {
+    .mdc-text-field {
+      @apply rounded-none p-0 bg-transparent;
+    }
+    .mat-mdc-form-field, .mat-mdc-floating-label {
+      @apply font-primary text-[14px] text-bodyText no-underline leading-none normal-case;
+    }
+    .mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) .mat-mdc-form-field-infix {
+      @apply p-0;
+    }
+    & .mat-mdc-form-field-infix {
+        @apply p-0 min-h-0;
+    }
+    & input.mat-mdc-input-element {
+        @apply m-0 h-12 leading-[46px] border border-solid border-grayBorder px-5 rounded-[3px] outline-none block text-[14px] text-bodyText font-primary font-normal w-full bg-grayBg focus:bg-white box-border; 
+    }
+    .mat-mdc-form-field-subscript-wrapper, .mdc-line-ripple {
+      @apply hidden;
+    }
+  }
+}
+//common primary btn 
+@mixin commonPrimaryBtn {
+  .cashier-managesale-top-btn,
+  .cashier-managesale-top-btnA,
+  .cashier-popup-btn,
+  .cashier-managesale-top-btnC {
+    @apply flex flex-wrap gap-4;
+    .mat-mdc-raised-button .mdc-button__label,
+    .mdc-button {
+      @apply text-[16px] font-bold rounded-[5px] h-12 leading-[48px] py-0 px-7 maxXs:px-4  min-w-0 transition-colors font-primary;
+    }
+    .mat-mdc-raised-button.mat-primary .mdc-button__label {
+      @apply bg-themeRed text-white hover:bg-themeRed;
+    }
+    .mat-mdc-raised-button.mat-accent .mdc-button__label {
+      @apply bg-themeRed text-heading hover:bg-themeRed hover:text-white;
+    }
+    .mat-mdc-raised-button.mat-warn .mdc-button__label {
+      @apply bg-themeRed text-white hover:bg-themeRed hover:text-white;
+    }
+    .mat-mdc-raised-button:not(:disabled) {
+      @apply bg-transparent;
+    }
+    .mat-mdc-raised-button.mat-mdc-button-base {
+      @apply h-auto;
+    }
+    .mdc-button--raised {
+      @apply p-0;
+    }
+  }
+}
+@mixin cashierInputFileFieldStyle {
+  .cashier-input-field-file-label {
+    input {
+      @apply h-12 leading-[46px] border border-solid border-grayBorder px-5 rounded-[3px] outline-none block text-[14px] text-bodyText font-primary font-normal w-full bg-grayBg focus:bg-white box-border cursor-pointer;
+    }
+    input::file-selector-button {
+      @apply bg-grayBg rounded border border-solid border-grayBorder p-0 px-2 font-primary font-normal text-bodyText mr-3;
+    }
+  }
+}
+@mixin cashierRadioBtnStyle {
+  .cashier-radio-field-style {
+    .mat-mdc-radio-button.mat-mdc-radio-checked .mdc-radio__background::before {
+      @apply bg-themeRed;
+    }
+    .mat-mdc-radio-button .mdc-radio .mdc-radio__native-control:enabled:checked + .mdc-radio__background .mdc-radio__outer-circle {
+      @apply border-themeRed;
+    }
+    .mat-mdc-radio-button .mdc-radio .mdc-radio__native-control:enabled + .mdc-radio__background .mdc-radio__inner-circle {
+      @apply border-themeRed;
+    }
+    .mat-mdc-radio-button.mat-mdc-radio-checked .mat-ripple-element {
+      @apply bg-themeRed;
+    }
+    .mat-mdc-radio-button .mdc-radio:hover .mdc-radio__native-control:enabled:checked + .mdc-radio__background .mdc-radio__outer-circle {
+      @apply border-themeRed;
+    }
+    .mat-mdc-radio-button .mdc-radio:hover .mdc-radio__native-control:enabled + .mdc-radio__background .mdc-radio__inner-circle {
+      @apply border-themeRed;
+    }
+    .mat-mdc-radio-button .mdc-form-field {
+      @apply text-bodyText;
+    }
+    .mdc-form-field > label {
+      @apply text-[16px] font-primary text-bodyText pl-0 cursor-pointer;
+    }
+    .mat-mdc-radio-group {
+      @apply flex gap-3;
+    }
+    .mat-mdc-radio-button .mdc-radio {
+      --mdc-radio-state-layer-size: 35px;
+    }
+  }
+}
+@mixin cashierCheckboxStyle {
+  .cashier-salereturns-table-list,
+  .cashier-managesale-table-list,
+  .cashier-role-list {
+    .mdc-checkbox__background {
+      @apply w-4 h-4 border-2 border-grayBorderTwo;
+     }
+     .mdc-checkbox .mdc-checkbox__native-control:enabled:focus:focus:not(:checked):not(:indeterminate) ~ .mdc-checkbox__background {
+      @apply border-grayBorderTwo;
+    }
+    .mdc-checkbox .mdc-checkbox__native-control:focus:checked ~ .mdc-checkbox__ripple {
+      @apply bg-themeRed;
+    }
+    .mdc-checkbox .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .mdc-checkbox__background {
+      @apply border-grayBorderTwo;
+    }
+  }
+}
+@mixin cashierCalenderFieldStyle {
+  .cashier-calender-field-style {
+      .mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper {
+        @apply p-0;
+      }
+      .mat-mdc-form-field-flex {
+        @apply h-12 leading-[46px] border border-solid border-grayBorder pl-5 rounded-[3px] outline-none inline-flex text-[14px] text-bodyText font-primary font-normal w-full bg-grayBg focus:bg-white box-border;
+      }
+      .mat-mdc-form-field-subscript-wrapper {
+        @apply hidden;
+      }
+      .mat-mdc-form-field {
+          @apply block w-full;
+      }
+      .mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) .mat-mdc-form-field-infix {
+        @apply p-0;
+      }
+      .mat-mdc-form-field-infix {
+        @apply min-h-0 w-full;
+      }
+      .mdc-line-ripple {
+        @apply hidden;
+      }
+  }
+  abbr[title] {
+    text-decoration:  none !important;
+  }
+}
+@mixin cashierTextareaFieldStyle {
+  .cashier-input-field-style textarea {
+    @apply h-12 leading-[46px] border border-solid border-grayBorder px-5 rounded-[3px] outline-none block text-[14px] text-bodyText font-primary font-normal w-full bg-grayBg focus:bg-white box-border;
+    @include transition;
+    &:focus {
+      @apply bg-white;
+    }
+      &::-moz-placeholder,
+    &::placeholder {
+      @apply text-bodyText opacity-70 font-primary font-normal;
+    }
+  }
+  .cashier-input-field-style textarea {
+    @apply py-2.5 pt-0 h-[120px];
+  }
+}
+//product counter style
+@mixin productCounter {
+  & p {
+      @apply text-[14px];
+      @apply font-normal;
+      @apply text-bodyText;
+      @apply px-3;
+  }
+  & button {
+      @apply leading-[26px] rounded-[3px] text-center inline-block text-themeRed h-[30px] w-[30px] border-2 border-[#C1D5FE] border-solid;
+      & .material-icons {
+          @apply leading-[26px] translate-x-[0px] text-[16px] rounded-none;
+      }
+      &.active {
+          @apply bg-themeRed text-white border-themeRed;
+      }
+  }
+}
+
+//product delete btn
+@mixin productDeleteBtn {
+  .product-delete-btn {
+    @apply h-6 w-6 leading-[23px] text-center inline-block border rounded-[3px] border-themeRed border-solid;
+    & .material-icons {
+        @apply leading-[22px] translate-x-[-1px] text-[16px] text-themeRed;
+    }
+  }
+}
+
+
+//popup close icon
+@mixin cashierPopupClose {
+  .cashier-popup-header-close a {
+    @apply h-9 w-9 leading-[35px] text-center inline-block border border-solid rounded-[3px] border-themeRed outline-none;
+    & .material-icons {
+        @apply text-[20px];
+        @apply leading-[34px];
+        @apply text-themeRed;
+        transform: translateX(-1px);
+    }
+  }
+}
+
+//popup material-btn
+@mixin materialPopupBtn {
+  .cashier-popup-btn {
+    .mat-raised-button {
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      color: #fff !important;
+      border-radius: 5px !important;
+      height: 48px !important;
+      line-height: 48px !important;
+      padding: 0px 16px !important;
+      width: 100% !important;
+      @apply text-center;
+    }
+    .mat-raised-button.mat-primary {
+      @apply bg-themeRed;
+    }
+  }
+}
+
+//popup common style
+@mixin popupCommonStyle {
+  .mat-dialog-container {
+    padding: 0px !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+  }
+  .cdk-overlay-dark-backdrop {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .mat-dialog-content {
+    max-height: 90vh;
+    max-width: 90vw;
+  }
+}
+
+//common action menu style
+@mixin commonActionMenuStyle {
+  .mat-mdc-menu-item img {
+    @apply w-4;
+    @apply mr-2;
+  }
+  .mat-mdc-menu-item span {
+    @apply text-heading text-sm font-primary;
+  }
+  .mat-mdc-menu-item {
+    height: 40px !important;
+    line-height: 40px !important;
+  }
+  .common-action-menu-style.mat-mdc-icon-button {
+    @apply border border-solid border-[#C1D5FE] h-9 rounded text-themeRed w-auto min-w-[85px] text-sm leading-3 inline-flex font-primary;
+  }
+  button.mat-mdc-icon-button .mat-mdc-button-touch-target {
+    @apply h-auto w-auto;
+  }
+  button.mat-mdc-icon-button .mat-mdc-button-persistent-ripple::before {
+    @apply hidden;
+  }
+  .common-action-menu-style {
+    .mat-icon {
+      width: 18px;
+      transform: translateY(-6px);
+    }
+    i {
+      @apply ml-2;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+//cashier header searchbar
+@mixin cashierHeaderSearch {
+  div {
+    .cashier-table-header-search {
+      & input {
+        @apply h-10 w-full block rounded-[3px] border border-solid border-grayBorder pl-11 pr-4 text-[14px] font-normal font-primary text-bodyText;
+        &:focus-visible {
+          @apply outline-none;
+        }
+      }
+      & span {
+        @apply absolute top-2.5 left-3.5 text-[#B7B7B7] text-[20px] inline-block;
+      }
+    }
+    .cashier-input-field-file label {
+      @apply h-12 border-0 rounded-none outline-none block w-full bg-transparent cursor-pointer focus:bg-white transition-colors;
+    }
+    .cashier-input-field-file input {
+      @apply hidden;
+    }
+  }
+}
+
+//cashier header searchbar action
+@mixin cashierHeaderSearchAction {
+  .cashier-table-header-search-action-btn {
+    & button {
+      @apply h-10 w-10 rounded-[3px] border border-solid border-grayBorder p-0 text-[14px] leading-[38px] font-normal font-primary inline-block text-bodyText text-center ml-2.5;
+      & svg {
+        @apply inline-block;
+      }
+      &.filter {
+        @include widthInherit;
+        @apply border-[#6F4EF6];
+        @apply px-5;
+        @apply text-[#6F4EF6];
+        @apply ml-0;
+        @apply maxSm:px-4;
+        & svg {
+          @apply mr-1.5;
+        }
+      }
+      &.pdf {
+        @apply border-[#FF9720];
+      }
+      &.csv {
+        @apply border-[#27DB8D];
+      }
+      &.printer {
+        @apply border-[#6F4EF6];
+      }
+    }
+  }
+}
+
+//sidebar menu style
+@mixin cashierSidebarMuneStyle {
+  .cashier-dashboard-sidebar {
+    @include transition;
+    @apply relative max-w-[315px] ml-0 bg-white z-10;
+    .cashier-header-bar-responsive {
+      @apply absolute top-[23px] right-[-60px] z-[11] inline-block cursor-pointer text-center h-8 w-8 leading-[47px] text-themeRed bg-grayBorder maxLg:-right-11;
+      @media (max-width: 359px) {
+        right: -20px !important;
+      }
+      .mat-icon {
+        @apply leading-[0px];
+      }
+    }
+  }
+  .cashier-dashboard-main {
+    @apply ml-[315px] minMaxTablet:ml-0 maxLg:ml-0;
+    @media (min-width: 320px) and (max-width: 1900px) {
+      @apply ml-0;
+    }
+    @include transition;
+  }
+  .cashier-dashboard-sidebar.sidebar-enable {
+    .cashier-menu-wrapper {
+      @apply left-[-315px] minMaxTablet:left-0 maxLg:left-0;
+      @media (min-width: 320px) and (max-width: 1900px) {
+        @apply left-0;
+      }
+    }
+  }
+  .cashier-dashboard-main.sidebar-enable {
+      @apply ml-0;
+  }
+  .cashier-menu-overlay.sidebar-enable {
+    @media (max-width: 1900px) {
+      background: rgba(0,0,0,0.6);
+      transition: all linear 0.3s;
+      @apply fixed top-0 left-0 right-0 bottom-0 z-10;
+    }
+  }
+}
+
+@mixin cashierHeaderStyle {
+  .cashier-breadcrumb-area {
+    @apply hidden;
+    @media (max-width: 575px) {
+      @apply block;
+    }
+  }
+  .cashier-content-area {
+    @apply mt-[30px];
+  }
+  .cashier-header-breadcrumb {
+    @media (max-width: 575px) {
+      @apply hidden;
+    }
+  }
+//header area start
+.cashier-header-shortmenu {
+  @apply relative;
+  & .mat-icon {
+      @apply text-[18px];
+      width: 18px !important;
+  }
+  @media (max-width: 359px) {
+      @apply hidden;
+  }
+}
+.cashier-header-language-content {
+  & ul {
+      & li {
+          @apply leading-none;
+      }
+  }
+  & .mat-icon {
+      width: 14px !important;
+      @apply text-bodyText text-[18px] translate-y-1;
+  }
+}
+.cashier-header-language-content {
+  @apply translate-y-[-2px];
+}
+.cashier-header-bar {
+@apply leading-none;
+}
+.custom-height-70 {
+  @apply h-[70px];
+}
+.cashier-header-notify-wrapper {
+  & svg {
+      @apply min-w-[18px];
+  }
+}
+.cashier-header-profile-info {
+  & i {
+      @apply text-heading absolute top-0 right-0 text-[16px] translate-y-1;
+  }
+}
+.cashier-header-bar span {
+  @apply mb-[1px];
+}
+
+//shortcut dropdown
+.cashier-quick-dropdown {
+  @apply absolute top-full right-0 w-[220px] z-[9] border border-solid border-grayBorder py-3 px-5 bg-white opacity-0 scale-0 invisible;
+  box-shadow: 0px 20px 40px rgba(18, 42, 91, 0.05);
+  &.shortmenu-enable,
+  &.langmenu-enable,
+  &.promenu-enable {
+      @apply opacity-100 visible scale-100;
+  }
+  ul {
+      li {
+          a {
+              @apply text-[14px] py-3 px-5 rounded block font-normal text-bodyText hover:bg-grayBgLight hover:text-themeRed;
+              @include transition;
+              svg {
+                  @apply mr-2.5 translate-y-[-1px];
+              }
+              &:hover {
+                path, 
+                rect {
+                  @apply fill-themeRed;
+                }
+              }
+          }
+      }
+  }
+}
+.cashier-quick-lang-dropdown {
+  @apply w-[240px] p-2.5;
+  &.langmenu-enable {
+      @apply left-auto right-0 top-[45px];
+  }
+}
+.cashier-quick-pro-dropdown {
+  @apply w-[195px];
+  &.promenu-enable {
+      @apply left-auto right-0 top-[59px];
+  }
+}
+.cashier-quick-pro-dropdown {
+  & a {
+      @apply inline-flex items-center leading-none;
+      .mat-icon {
+          width: 24px !important;
+          @apply text-[16px] translate-y-[3px];
+      }
+  }
+}
+.cashier-quick-dropdown {
+  @apply maxSm:right-auto maxXs:left-0;
+}
+// notify dropdown
+.cashier-notify-dropdown-list {
+  .cashier-notify-img {
+      @apply rounded-[5px] mr-4 w-[50px];
+  }
+  .cashier-notify-text {
+      h6 {
+          @apply text-[14px] font-semibold text-heading mb-2;
+      }
+      span {
+          @apply text-[12px] font-normal text-bodyText block;
+      }
+  }
+}
+.cashier-notify-dropdown-list a {
+  @apply inline-flex text-bodyText hover:text-themeRed leading-none;
+  & .mat-icon {
+      @apply text-[16px] ml-1;
+  }
+}
+.cashier-notify-dropdown {
+  @apply absolute top-[45px] right-0 w-[250px] z-[9] bg-white opacity-0 scale-0 invisible;
+  box-shadow: 0px 20px 40px rgba(18, 42, 91, 0.05);
+  &.notifydropdown-enable,
+  &.emaildropdown-enable {
+      @apply opacity-100 visible scale-100;
+      @media (max-width: 1400px) {
+          @apply left-auto;
+          @apply right-0;
+      }
+  }
+  &.notifydropdown-enable {
+      @media (max-width: 575px) {
+          @apply left-auto -right-20;
+      }
+  }
+  &.emaildropdown-enable {
+      @media (max-width: 575px) {
+          @apply left-auto -right-14;
+      }
+  }
+}
+.cashier-header-shortmenu {
+  a.short {
+      @apply relative z-[9];
+  }
+}
+.cashier-header-profile {
+  @apply relative z-[9];
+}
+.cashier-header-notification {
+  a.noti {
+      @apply relative z-[9];
+  }
+}
+.cashier-header-email {
+  .emai {
+      @apply relative z-[9];
+  }
+}
+.cashier-header-language {
+  @apply relative z-[9] cursor-pointer;
+}
+.cashier-notify-dropdown {
+  @apply z-[9];
+}
+.cashier-quick-dropdown {
+  @apply z-[9];
+}
+
+.cashier-header-overlay.shortmenu-enable {
+  @apply block;
+}
+.cashier-header-overlay.notifydropdown-enable {
+  @apply block;
+}
+.cashier-header-overlay.emaildropdown-enable {
+  @apply block;
+}
+.cashier-header-overlay.langmenu-enable {
+  @apply block;
+}
+.cashier-header-overlay.promenu-enable {
+  @apply block;
+}
+.cashier-header-overlay {
+  @apply hidden fixed top-0 left-0 right-0 w-full h-full z-[8];
+}
+}
