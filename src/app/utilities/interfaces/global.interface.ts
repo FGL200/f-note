@@ -4,3 +4,8 @@ export interface EnvironmentInterface {
   production: boolean;
   version: string;
 }
+
+export interface LoginInterface {
+  Username: string | undefined | null;
+  Password: string | undefined | null;
+}

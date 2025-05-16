@@ -1,0 +1,47 @@
+<div class="min-h-[100vh] flex justify-center items-center">
+  <mat-card class="p-4">
+    <mat-card-header>
+      <div class="text-2xl text-bold mb-4">
+        Welcome to fNotes!
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="fg" (submit)="onSubmit()" class="grid grid-cols-12 gap-x-4">
+        <div class="col-span-12">
+          <div class="mb-4 text-muted">Gather all your notes in one place!</div>
+        </div>
+        <div class="col-span-12">
+          <div class="mb-4">Please login to continue.</div>
+        </div>
+        <div class="col-span-12">
+          <div class="mb-4">
+            <label for="Username">Username <span class="text-red-400 text-sm">*</span></label>
+            <input formControlName="Username" type="text" class="form-control" id="Username">
+          </div>
+        </div>
+        <div class="col-span-12">
+          <div class="mb-4">
+            <label for="Password">Password <span class="text-red-400 text-sm">*</span></label>
+            <div *ngIf="showPassword$|async as showPassword" class="input-group">
+              <input formControlName="Password" [type]="showPassword==1?'password':'text'" class="input-group-field"
+                id="Password">
+              <div class="input-group-label">
+                <button *ngIf="showPassword==1" (click)="showPassword$.next(2)" mat-button color="primary">
+                  <i class="fa-light fa-eye"></i>
+                </button>
+                <button *ngIf="showPassword==2" (click)="showPassword$.next(1)" mat-button color="primary">
+                  <i class="fa-light fa-eye-slash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12">
+          <div class="form-submit mb-4">
+            <button type="submit" mat-raised-button color="primary">Sign In</button>
+          </div>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
