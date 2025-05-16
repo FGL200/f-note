@@ -8,20 +8,23 @@ import { LoginInterface } from 'src/app/utilities/interfaces/global.interface';
 import { LocalStorageService } from 'src/app/utilities/services/local-storage-service/local-storage.service';
 import { RoutesService } from 'src/app/utilities/services/routes-service/routes.service';
 
+
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss']
 })
-export class LoginComponent {
+export class RegisterComponent {
 
   public readonly prompt$ = new PromptMessage();
   public readonly showPassword$ = new BehaviorSubject<number>(1);
+  public readonly showConfirmPassword$ = new BehaviorSubject<number>(1);
   public readonly fg = this._newFg();
 
   constructor(
     public routes: RoutesService,
     private _localS: LocalStorageService,
+    private _router: Router,
   ) { }
 
   public onSubmit() {
@@ -37,10 +40,10 @@ export class LoginComponent {
   }
 
   private _newFg() {
-    const lastSuccessLogin = this._localS.object.getItem<LoginInterface>('lastSuccessLogin');
     return new FormGroup({
-      Email: Helper.forms.controls<string>(lastSuccessLogin?.Email, [Validators.required, Validators.email]),
+      Email: Helper.forms.controls<string>(undefined, [Validators.required]),
       Password: Helper.forms.controls<string>(undefined, [Validators.required]),
+      ConfirmPassword: Helper.forms.controls<string>(undefined, [Validators.required]),
     });
   }
 }

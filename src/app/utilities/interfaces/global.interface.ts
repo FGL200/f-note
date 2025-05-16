@@ -1,3 +1,5 @@
+import { AbstractControl } from "@angular/forms";
+
 export interface EnvironmentInterface {
   baseURL: string;
   websiteURL: string;
@@ -6,6 +8,11 @@ export interface EnvironmentInterface {
 }
 
 export interface LoginInterface {
-  Username: string | undefined | null;
+  Email: string | undefined | null;
   Password: string | undefined | null;
+}
+
+export interface InvalidControlInreface {
+  control: AbstractControl,
+  key: string
 }
